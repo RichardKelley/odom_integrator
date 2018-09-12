@@ -27,6 +27,8 @@ add_executable(${PROJECT_NAME}_node
   src/odom_integrator_node.cpp
   src/odom_integrator.cpp)
 
+add_dependencies(${PROJECT_NAME}_node gnss_driver_generate_messages_cpp)
+
 target_link_libraries(${PROJECT_NAME}_node
   ${catkin_LIBRARIES}
   yaml-cpp
